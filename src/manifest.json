@@ -16,7 +16,7 @@
 //"default_locale": "en",
     "background_page": "background.html",
     "browser_action": {
-        "default_title": "Sov",
+        "default_title": "DevIT",
         "default_icon": "img/icon_48.png",
         "popup": "popup.html"
     },
