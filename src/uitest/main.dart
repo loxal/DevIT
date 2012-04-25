@@ -36,5 +36,6 @@ test2() {
 
 main() {
     print('init');
+    print(args.win_id);
   final TestSuite testSuite = new TestSuite();
 }
