@@ -2,6 +2,7 @@
     "name":"DevIT",
     "version":"1.0.0.0",
     "description":"Dev IT!",
+    "devtools_page":"devtools.html",
 //    "page_action":{
 //        "default_icon":"img/icon_16.png",
 //        "default_title":"There's a 'G' in this URL!"
@@ -28,6 +29,7 @@
 //      "js": ["jquery.js", "myscript.js"]
 //      "dart": ["test.dart"]
 //      "js": ["test.dart"]
+            "js":["test.js"]
         }
     ],
 //    "chrome_url_overrides" : {

@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/DevIT.iml" filepath="$PROJECT_DIR$/DevIT.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Erpiv.iml" filepath="$PROJECT_DIR$/Erpiv.iml" />
     </modules>
   </component>
 </project>

@@ -13,8 +13,6 @@ class TestSuite {
       document.body.nodes.add(exec);
       run.on.click.add((e) => testFirst());
       exec.on.click.add((e) => test2());
-
-
   }
 
   TestSuite() {
@@ -23,10 +21,14 @@ class TestSuite {
 }
 
 testFirst() {
-  print(document.body.query('#gwt-uid-13').value);
-  document.body.query('input.gwt-TextBox').value = 'test VALUE';
-  final ButtonElement button = document.body.query('button.gwt-Button');
-  button.click();
+//chrome.windows.create("mom", (f) => print("test"));
+//  print(chrome.windows.WINDOW_ID_CURRENT);
+//    print('testFirst1');
+//  print(document.body.query('#q'));
+//  print(document.body.query('#gwt-uid-13').value);
+//  document.body.query('input.gwt-TextBox').value = 'test VALUE';
+//  final ButtonElement button = document.body.query('button.gwt-Button');
+//  button.click();
 }
 
 test2() {
@@ -36,6 +38,5 @@ test2() {
 
 main() {
     print('init');
-    print(args.win_id);
   final TestSuite testSuite = new TestSuite();
 }
