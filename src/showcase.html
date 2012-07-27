@@ -1,0 +1,87 @@
+<!--
+  ~ Copyright 2012 Alexander Orlov <alexander.orlov@loxal.net>. All rights reserved.
+  ~ Use of this source code is governed by a BSD-style
+  ~ license that can be found in the LICENSE file.
+  -->
+
+<!DOCTYPE html>
+
+<script>
+    function changePlayground() {
+        document.getElementById("playground").src = document.getElementById("playgrounds").value;
+    }
+
+
+</script>
+<style>
+    #playground {
+        width: 700px;
+        height: 550px;
+        border: 0;
+    }
+</style>
+
+<h1>HTML5 Local Storage</h1>
+<button onclick="removeItemFromLocalStorage('myItem')">Remove "myItem" from localStorage</button>
+<button onclick="clearAllItemsInLocalStorage('myItem')">Clear all Items in localStorage</button>
+<button onclick="clearAllItemsInLocalStorage()">Clear all Items in localStorage</button>
+<button onclick="showLocalStorageContent()">Show localStorage Content</button>
+
+<input type="file" id="files" name="files[]" multiple/>
+<output id="list"></output>
+
+<output>
+    FEST
+</output>
+
+<script>
+
+    document.querySelector('#files').onchange = function(e) {
+        var files = e.target.files; // FileList
+
+        var output = [];
+        for (var i = 0, f; f = files[i]; ++i) {
+            output.push('<li><b>', f.name, '</b> (',
+                    f.type || 'n/a', ') - ', f.size, ' bytes</li>');
+        }
+        document.querySelector('#list').innerHTML =
+                '<ul>' + output.join('') + '</ul>';
+    };
+
+    var user = new Object();
+    user.name = "Bradley Stacey";
+    user.site = "http://openbit.co.uk";
+    user.quote = "\"A child miseducated is a child lost.\" - John Fitzgerald Kennedy"
+
+
+    function localStorageDemo() {
+        localStorage.setItem("myItem", "myValue");
+        var aValue = localStorage.getItem("myItem");
+        if (localStorage.getItem("ItemThatDoesNotExist")) {
+            document.writeln("The ItemThatDoesNotExist isn't stored in localStorage yet!")
+        } else {
+            document.writeln(aValue);
+        }
+    }
+
+    function clearAllItemsInLocalStorage() {
+        localStorage.clear();
+    }
+
+    function removeItemFromLocalStorage(item) {
+        localStorage.removeItem(item)
+    }
+
+    function showLocalStorageContent() {
+        var aValue = localStorage.getItem("myItem");
+        if (localStorage.getItem("ItemThatDoesNotExist")) {
+            document.writeln("The ItemThatDoesNotExist isn't stored in localStorage yet!")
+        } else {
+            document.writeln(aValue);
+        }
+    }
+
+    // 0. sessionStorage TRY
+
+    onload = localStorageDemo();
+</script>

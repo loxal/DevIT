@@ -1,0 +1,45 @@
+<!--
+  ~ Copyright 2012 Alexander Orlov <alexander.orlov@loxal.net>. All rights reserved.
+  ~ Use of this source code is governed by a BSD-style
+  ~ license that can be found in the LICENSE file.
+  -->
+
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<title>Exchange</title>
+
+<style>
+    .thumb {
+        height: 75px;
+        border: 1px dashed #000;
+        margin: 10px 15px 0 0;
+    }
+</style>
+
+<script>
+
+    function clearDB() {
+        localStorage.clear();
+    }
+
+    function initDB() {
+    }
+
+    function dumpDB() {
+        for (var i = 0; i < localStorage.length; i++) {
+            document.getElementById('DBdump').innerHTML = localStorage.getItem(localStorage.key(i));
+        }
+    }
+
+</script>
+
+<script type="application/dart" src="test.dart"></script>
+<script src="http://dart.googlecode.com/svn/branches/bleeding_edge/dart/client/dart.js"></script>
+
+<script type="application/dart">
+    main() {
+        print('est');
+    }
+</script>
+
+<h1>DB Storage</h1>

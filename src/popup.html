@@ -1,0 +1,40 @@
+<!--
+  ~ Copyright 2012 Alexander Orlov <alexander.orlov@loxal.net>. All rights reserved.
+  ~ Use of this source code is governed by a BSD-style
+  ~ license that can be found in the LICENSE file.
+  -->
+
+<!DOCTYPE html>
+
+<script>
+    function changePlayground() {
+        document.getElementById("playground").src = document.getElementById("playgrounds").value;
+    }
+</script>
+        <script type="application/dart">
+            main() {
+                print('est');
+            }
+        </script>
+<style>
+    #playground {
+        width: 700px;
+        height: 560px;
+        border: 0;
+    }
+</style>
+
+<label><strong>Playground:</strong>
+    <select id="playgrounds" onchange="changePlayground()" onshow="changePlayground()">
+        <option value="test.html">Test
+        <option value="showcase.html">Showcase
+        <option value="http://golang.org/doc/play">Go
+        <option value="http://code.google.com/apis/ajax/playground" onshow="changePlayground()">Ajax
+    </select>
+</label><br/>
+
+<iframe id="playground" src="test.html"/>
+
+
+
+
